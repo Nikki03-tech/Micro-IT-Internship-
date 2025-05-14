@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Quiz Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Tech Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="quiz-container">
-        <h1>Tech Quiz Game</h1>
-        <div id="quiz">
-            <p id="question"></p>
-            <div id="choices"></div>
-            <button id="next" onclick="nextQuestion()">Next Question</button>
-        </div>
-        <div id="result" class="hidden">
-            <h2>Your score: <span id="score"></span>/15</h2>
-            <button onclick="restartQuiz()">Restart Quiz</button>
-        </div>
-        <div id="timer">Time left: <span id="time-left">45</span> seconds</div>
+  <div class="outer-wrapper">
+    <!-- Quiz Container -->
+    <div class="container" id="quiz-container">
+      <h1>Tech Quiz Game</h1>
+      <div class="timer">⏳ Time Left: <span id="time-left">45</span>s</div>
+      <h2 id="question">Question will appear here</h2>
+      <div id="choices" class="choices"></div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Result Container -->
+    <div class="container hidden" id="result-container">
+      <h2>🎉 Quiz Completed!</h2>
+      <p>✅ Score: <span id="score"></span> / 15</p>
+      <p>✔️ Attempted: <span id="attempted-count"></span></p>
+      <p>❌ Not Attempted: <span id="not-attempted-count"></span></p>
+      <button onclick="showReview()">Review Answers</button>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <!-- Review Container -->
+    <div class="container hidden" id="review-container">
+      <h2>📖 Review Answers</h2>
+      <div id="incorrect-answers"></div>
+      <div class="review-nav">
+        <button onclick="prevReviewPage()">Previous</button>
+        <button onclick="nextReviewPage()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
