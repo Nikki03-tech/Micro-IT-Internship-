@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  color: white;
+  color: black;
   background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
   background-size: 1400% 1400%;
   animation: rainbow 15s ease infinite;
@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  background: rgba(0, 0, 0, 0.5);
+  background: #fff;
   padding: 30px;
   border-radius: 15px;
   width: 100%;
