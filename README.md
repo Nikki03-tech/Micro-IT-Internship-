@@ -1,5 +1,3 @@
-# Micro-IT-Internship-
-
 Tech Quiz Website**
 
 This **Tech Quiz Website** is an interactive and dynamic web application designed to test users' knowledge on various technology-related topics. It features a smooth and engaging user experience with visually appealing UI and clear navigation. Below are its core features:
